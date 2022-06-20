@@ -1,0 +1,1 @@
+export { BootstrapFetchComponent } from './BootstrapFetchComponent';

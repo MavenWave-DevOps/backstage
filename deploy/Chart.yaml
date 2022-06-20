@@ -1,0 +1,17 @@
+apiVersion: v2
+name: backstage
+description: A Helm chart for Backstage
+type: application
+version: 0.0.1
+appVersion: v0.0.1-alpha.1
+
+# sources:
+#   - https://github.com/backstage/backstage
+#   - https://github.com/spotify/lighthouse-audit-service
+
+# dependencies:
+#   - name: postgresql
+#     condition: postgresql.enabled
+#     version: 11.1.28
+#     repository: https://charts.bitnami.com/bitnami
+

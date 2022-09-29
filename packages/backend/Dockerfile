@@ -26,7 +26,5 @@ RUN yarn install --frozen-lockfile --production --network-timeout 300000 && rm -
 COPY --from=build /build/packages/backend/dist/bundle.tar.gz /build/app-config.yaml ./
 RUN tar xzf bundle.tar.gz && rm bundle.tar.gz
 
-RUN chmod 755 /app
-
 CMD ["node", "packages/backend", "--config", "app-config.yaml"]
 

@@ -3,9 +3,9 @@ FROM gcr.io/cloud-builders/yarn as build
 WORKDIR /build
 COPY ./* ./
 
-RUN yarn --cwd packages/backend install
-RUN yarn --cwd packages/backend tsc
-RUN yarn --cwd packages/backend build
+RUN yarn install
+RUN yarn tsc
+RUN yarn build
 
 
 FROM node:16-bullseye-slim

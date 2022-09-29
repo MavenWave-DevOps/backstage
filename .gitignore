@@ -4,7 +4,10 @@
 **/secrets/
 **/service-accounts/
 
-backstage/packages/backend/backstage-db/
+**/*.sqlite
+**/*.sqlite3
+
+**/backstage-db/
 
 **/Chart.lock
 charts/**/charts

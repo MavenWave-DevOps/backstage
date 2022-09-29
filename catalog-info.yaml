@@ -1,13 +1,11 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: ignite-walker
-  description: An example of a Backstage application.
-  # Example for optional annotations
+  name: backstage
+  description: Project Tidal Wave Backstage
    annotations:
-  #   github.com/project-slug: backstage/backstage
      backstage.io/techdocs-ref: dir:.
 spec:
   type: website
-  owner: john@example.com
+  owner: walker.obrien@mavenwave.com
   lifecycle: experimental

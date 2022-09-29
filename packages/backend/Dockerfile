@@ -3,9 +3,9 @@ FROM gcr.io/cloud-builders/yarn as build
 WORKDIR /build
 COPY ./* ./
 
-RUN yarn install
-RUN yarn tsc
-RUN yarn build
+RUN yarn --cwd packages/backend install
+RUN yarn --cwd packages/backend tsc
+RUN yarn --cwd packages/backend build
 
 
 FROM node:16-bullseye-slim
@@ -25,6 +25,10 @@ RUN yarn install --frozen-lockfile --production --network-timeout 300000 && rm -
 
 COPY --from=build /build/packages/backend/dist/bundle.tar.gz /build/app-config.yaml ./
 RUN tar xzf bundle.tar.gz && rm bundle.tar.gz
+
+RUN ls
+RUN ls packages
+RUN ls packages/backend
 
 CMD ["node", "packages/backend", "--config", "app-config.yaml"]
 

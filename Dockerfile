@@ -51,9 +51,6 @@ COPY --from=build /app/packages/backend/dist/bundle.tar.gz .
 RUN tar xzf bundle.tar.gz && rm bundle.tar.gz
 
 # Copy any other files that we need at runtime
-COPY app-config.yaml ./
-RUN ls
-RUN ls packages
-RUN ls packages/backend
+COPY app-config.production.yaml ./app-config.yaml
 
 CMD ["node", "packages/backend", "--config", "app-config.yaml"]

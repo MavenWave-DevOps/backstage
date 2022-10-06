@@ -31,6 +31,7 @@ import search from './plugins/search';
 import { PluginEnvironment } from './types';
 import { ServerPermissionClient } from '@backstage/plugin-permission-node';
 // import argocd from './plugins/argocd';
+// import kubernetes from './plugins/kubernetes';
 
 
 function makeCreateEnv(config: Config) {
@@ -82,6 +83,7 @@ async function main() {
   const searchEnv = useHotMemoize(module, () => createEnv('search'));
   const appEnv = useHotMemoize(module, () => createEnv('app'));
   // const argocdEnv = useHotMemoize(module, () => createEnv('argocd'));
+    // const kubernetesEnv = useHotMemoize(module, () => createEnv('kubernetes'));
 
   const apiRouter = Router();
   apiRouter.use('/catalog', await catalog(catalogEnv));
@@ -91,6 +93,7 @@ async function main() {
   apiRouter.use('/proxy', await proxy(proxyEnv));
   apiRouter.use('/search', await search(searchEnv));
   // apiRouter.use('/argocd', await argocd(argocdEnv));
+    // apiRouter.use('/kubernetes', await kubernetes(kubernetesEnv));
 
 
   // Add backends ABOVE this line; this 404 handler is the catch-all fallback

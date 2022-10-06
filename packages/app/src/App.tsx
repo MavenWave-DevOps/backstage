@@ -34,7 +34,7 @@ import { catalogEntityCreatePermission } from '@backstage/plugin-catalog-common/
 import { BootstrapPage } from '@internal/plugin-bootstrap';
 import { googleAuthApiRef, githubAuthApiRef } from '@backstage/core-plugin-api';
 import { SignInPage } from '@backstage/core-components';
-//test
+
 const googleProvider = {
     id: 'google-auth-provider',
     title: 'Google',

@@ -22,7 +22,7 @@
     "@backstage/plugin-catalog-react": "^1.0.1",
     "@backstage/plugin-cloudbuild": "^0.3.5",
     "@backstage/plugin-github-actions": "^0.5.5",
-    "@backstage/plugin-kubernetes": "^0.6.5",
+    "@backstage/plugin-kubernetes": "^0.7.2",
     "@backstage/plugin-org": "^0.5.4",
     "@backstage/plugin-permission-react": "^0.4.0",
     "@backstage/plugin-scaffolder": "^1.1.0",

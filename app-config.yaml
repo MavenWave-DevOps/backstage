@@ -26,8 +26,10 @@ backend:
     credentials: true
   database:
     client: sqlite3
-    connection:
-      directory: 'backstage-db'
+  connection: ':memory:'
+  cache:
+    store: memory
+      # directory: 'backstage-db'
   # workingDirectory: /tmp # Use this to configure a working directory for the scaffolder, defaults to the OS temp-dir
 
 integrations:

@@ -1,15 +1,3 @@
-# apiVersion: backstage.io/v1alpha1
-# kind: Component
-# metadata:
-#   name: backstage
-#   description: Project Tidal Wave Backstage
-#    annotations:
-#      backstage.io/techdocs-ref: dir:.
-# spec:
-#   type: website
-#   owner: walker.obrien@mavenwave.com
-#   lifecycle: experimental
-# ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:

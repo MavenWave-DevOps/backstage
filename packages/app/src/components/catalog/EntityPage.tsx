@@ -78,7 +78,7 @@ import {
     EntityArgoCDOverviewCard,
     isArgocdAvailable
 } from '@roadiehq/backstage-plugin-argo-cd';
-
+import { EntityArgocdAutopilotContent } from '@internal/plugin-argocd-autopilot';
 
 const cicdContent = (
   <EntitySwitch>
@@ -209,6 +209,11 @@ const serviceEntityPage = (
     <EntityLayout.Route path="/docs" title="Docs">
       <EntityTechdocsContent />
     </EntityLayout.Route>
+
+    <EntityLayout.Route path="/argocd-autopilot" title="Argocd Autopilot Plugin">
+      <EntityArgocdAutopilotContent />
+    </EntityLayout.Route>
+
   </EntityLayout>
 );
 

@@ -1,9 +1,13 @@
-# The Plugins Folder
+# argocd-autopilot
 
-This is where your own plugins and their associated modules live, each in a
-separate folder of its own.
+Welcome to the argocd-autopilot plugin!
 
-If you want to create a new plugin here, go to your project root directory, run
-the command `yarn backstage-cli create`, and follow the on-screen instructions.
+_This plugin was created through the Backstage CLI_
 
-You can also check out existing plugins on [the plugin marketplace](https://backstage.io/plugins)!
+## Getting started
+
+Your plugin has been added to the example app in this repository, meaning you'll be able to access it by running `yarn start` in the root directory, and then navigating to [/argocd-autopilot](http://localhost:3000/argocd-autopilot).
+
+You can also serve the plugin in isolation by running `yarn start` in the plugin directory.
+This method of serving the plugin provides quicker iteration speed and a faster startup and hot reloads.
+It is only meant for local development, and the setup for it can be found inside the [/dev](./dev) directory.

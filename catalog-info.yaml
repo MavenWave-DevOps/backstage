@@ -1,3 +1,4 @@
+---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
@@ -9,3 +10,16 @@ spec:
   type: website
   owner: walker.obrien@mavenwave.com
   lifecycle: experimental
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  annotations:
+    argocd/app-selector: "app.kubernetes.io/managed-by=argocd-autopilot"
+  name: argocd-autopilot
+spec:
+  lifecycle: production
+  owner: my-team
+  type: service
+
